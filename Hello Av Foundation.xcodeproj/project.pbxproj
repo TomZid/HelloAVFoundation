@@ -13,6 +13,8 @@
 		F7AD1A4C20522E68001FA741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AD1A4B20522E68001FA741 /* Assets.xcassets */; };
 		F7AD1A4F20522E68001FA741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AD1A4D20522E68001FA741 /* LaunchScreen.storyboard */; };
 		F7AD1A5220522E68001FA741 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1A5120522E68001FA741 /* main.m */; };
+		F7AD1A5A2052328F001FA741 /* TZCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1A592052328F001FA741 /* TZCellTableViewCell.m */; };
+		F7AD1A5D20523A6F001FA741 /* TZSpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1A5C20523A6F001FA741 /* TZSpeechManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		F7AD1A4E20522E68001FA741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7AD1A5020522E68001FA741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AD1A5120522E68001FA741 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7AD1A582052328F001FA741 /* TZCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZCellTableViewCell.h; sourceTree = "<group>"; };
+		F7AD1A592052328F001FA741 /* TZCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZCellTableViewCell.m; sourceTree = "<group>"; };
+		F7AD1A5B20523A6F001FA741 /* TZSpeechManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZSpeechManager.h; sourceTree = "<group>"; };
+		F7AD1A5C20523A6F001FA741 /* TZSpeechManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZSpeechManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 		F7AD1A4120522E68001FA741 /* Hello Av Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				F7AD1A5B20523A6F001FA741 /* TZSpeechManager.h */,
+				F7AD1A5C20523A6F001FA741 /* TZSpeechManager.m */,
+				F7AD1A582052328F001FA741 /* TZCellTableViewCell.h */,
+				F7AD1A592052328F001FA741 /* TZCellTableViewCell.m */,
 				F7AD1A4220522E68001FA741 /* AppDelegate.h */,
 				F7AD1A4320522E68001FA741 /* AppDelegate.m */,
 				F7AD1A4520522E68001FA741 /* ViewController.h */,
@@ -97,6 +107,7 @@
 		F7AD1A3720522E68001FA741 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TZ;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = TZ;
 				TargetAttributes = {
@@ -143,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AD1A4720522E68001FA741 /* ViewController.m in Sources */,
+				F7AD1A5D20523A6F001FA741 /* TZSpeechManager.m in Sources */,
+				F7AD1A5A2052328F001FA741 /* TZCellTableViewCell.m in Sources */,
 				F7AD1A5220522E68001FA741 /* main.m in Sources */,
 				F7AD1A4420522E68001FA741 /* AppDelegate.m in Sources */,
 			);
@@ -279,9 +292,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3HPTL42C5;
 				INFOPLIST_FILE = "Hello Av Foundation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TZ.Hello-Av-Foundation";
+				PRODUCT_BUNDLE_IDENTIFIER = com.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,9 +307,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3HPTL42C5;
 				INFOPLIST_FILE = "Hello Av Foundation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TZ.Hello-Av-Foundation";
+				PRODUCT_BUNDLE_IDENTIFIER = com.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

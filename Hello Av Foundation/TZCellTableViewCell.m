@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  TZCellTableViewCell.m
 //  Hello Av Foundation
 //
 //  Created by tom on 09/03/2018.
 //  Copyright © 2018 TZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TZCellTableViewCell.h"
 
-@interface ViewController : UITableViewController
-
+@implementation TZCellTableViewCell
 
 @end
-

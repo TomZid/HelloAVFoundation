@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TZCellTableViewCell.h
 //  Hello Av Foundation
 //
 //  Created by tom on 09/03/2018.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface TZCellTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 @end
-
