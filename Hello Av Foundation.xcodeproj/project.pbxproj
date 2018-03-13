@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F75974BA2057A0D800B76D49 /* UITableView+layoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F75974B92057A0D800B76D49 /* UITableView+layoutCell.m */; };
 		F7AD1A4420522E68001FA741 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1A4320522E68001FA741 /* AppDelegate.m */; };
 		F7AD1A4720522E68001FA741 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1A4620522E68001FA741 /* ViewController.m */; };
 		F7AD1A4A20522E68001FA741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AD1A4820522E68001FA741 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F75974B82057A0D800B76D49 /* UITableView+layoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+layoutCell.h"; sourceTree = "<group>"; };
+		F75974B92057A0D800B76D49 /* UITableView+layoutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+layoutCell.m"; sourceTree = "<group>"; };
 		F7AD1A3F20522E68001FA741 /* Hello Av Foundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello Av Foundation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AD1A4220522E68001FA741 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7AD1A4320522E68001FA741 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F75974BB2057A0E200B76D49 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				F75974B82057A0D800B76D49 /* UITableView+layoutCell.h */,
+				F75974B92057A0D800B76D49 /* UITableView+layoutCell.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		F7AD1A3620522E68001FA741 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		F7AD1A4120522E68001FA741 /* Hello Av Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				F75974BB2057A0E200B76D49 /* category */,
 				F7AD1A5B20523A6F001FA741 /* TZSpeechManager.h */,
 				F7AD1A5C20523A6F001FA741 /* TZSpeechManager.m */,
 				F7AD1A582052328F001FA741 /* TZCellTableViewCell.h */,
@@ -156,6 +169,7 @@
 				F7AD1A4720522E68001FA741 /* ViewController.m in Sources */,
 				F7AD1A5D20523A6F001FA741 /* TZSpeechManager.m in Sources */,
 				F7AD1A5A2052328F001FA741 /* TZCellTableViewCell.m in Sources */,
+				F75974BA2057A0D800B76D49 /* UITableView+layoutCell.m in Sources */,
 				F7AD1A5220522E68001FA741 /* main.m in Sources */,
 				F7AD1A4420522E68001FA741 /* AppDelegate.m in Sources */,
 			);

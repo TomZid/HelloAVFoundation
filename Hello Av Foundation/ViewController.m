@@ -9,12 +9,11 @@
 #import "ViewController.h"
 #import "TZCellTableViewCell.h"
 #import "TZSpeechManager.h"
+#import "UITableView+layoutCell.h"
 
 @interface ViewController () <AVSpeechSynthesizerDelegate>
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, strong) TZSpeechManager *sm;
-
-@property (nonatomic, strong) TZCellTableViewCell *templateCell;
 @end
 
 @implementation ViewController
@@ -27,8 +26,6 @@
     self.array = [NSMutableArray array];
     [self.sm speakContinuously];
     self.tableView.estimatedRowHeight = 0;
-
-    self.templateCell = [TZCellTableViewCell new];
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
@@ -44,22 +41,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.templateCell.textLabel.text = self.array[indexPath.row];
-    CGSize size = [self.templateCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    NSLog(@"size.height is: %f", size.height);
-    return size.height;
+    NSString *id = indexPath.row % 2 ? @"rightCell" : @"leftCell";
+    return [tableView tz_heightForCellWithIdentifier:id configuration:^(UITableViewCell *cell) {
+        TZCellTableViewCell *c = (TZCellTableViewCell *)cell;
+        c.messageLabel.text = self.array[indexPath.row];
+    }];
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    C2 *cell = (C2 *)self.prototypeCell;
-//    cell.t.text = [self.tableData objectAtIndex:indexPath.row];
-//    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-//    CGSize textViewSize = [cell.t sizeThatFits:CGSizeMake(cell.t.frame.size.width, FLT_MAX)];
-//    CGFloat h = size.height + textViewSize.height;
-//    h = h > 89 ? h : 89;  //89是图片显示的最低高度， 见xib
-//    NSLog(@"h=%f", h);
-//    return 1 + h;
-//}
 
 #pragma mark - AVSpeechSynthesizerDelegate
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didStartSpeechUtterance:(AVSpeechUtterance *)utterance {
