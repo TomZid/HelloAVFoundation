@@ -11,6 +11,10 @@
 #import "TZSpeechManager.h"
 #import "UITableView+layoutCell.h"
 
+static inline NSString *cellIdentifierForReuse(NSIndexPath *indexPath) {
+    return indexPath.row % 2 ? @"rightCell" : @"leftCell";
+}
+
 @interface ViewController () <AVSpeechSynthesizerDelegate>
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, strong) TZSpeechManager *sm;
@@ -34,15 +38,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *id = indexPath.row % 2 ? @"rightCell" : @"leftCell";
-    TZCellTableViewCell *cell = (TZCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:id forIndexPath:indexPath];
+    TZCellTableViewCell *cell = (TZCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifierForReuse(indexPath) forIndexPath:indexPath];
     cell.messageLabel.text = self.array[indexPath.row];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *id = indexPath.row % 2 ? @"rightCell" : @"leftCell";
-    return [tableView tz_heightForCellWithIdentifier:id configuration:^(UITableViewCell *cell) {
+    return [tableView tz_heightForCellWithIdentifier:cellIdentifierForReuse(indexPath) configuration:^(UITableViewCell *cell) {
         TZCellTableViewCell *c = (TZCellTableViewCell *)cell;
         c.messageLabel.text = self.array[indexPath.row];
     }];
