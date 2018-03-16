@@ -11,7 +11,7 @@
 static TZSpeechManager *s = nil;
 
 @interface TZSpeechManager ()
-@property (nonatomic, strong) NSArray *messages;
+@property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic, strong) AVSpeechSynthesizer *speectSynthesizer;
 @property (nonatomic, strong) NSArray *voices;
 @end
@@ -34,22 +34,15 @@ static TZSpeechManager *s = nil;
 - (instancetype)init {
     self =  [super init];
     if (self) {
-        self.messages = @[@"对，你无情你残酷你无理取闹！",
-                          @"那你就不无情！？不残酷！？不无理 取闹！？",
-                          @"我哪里无情！？哪里残酷 ！？哪里无理取闹！？",
-                          @"你哪里不无 情！？哪里不残酷！？哪里不无理取闹！ ？",
-                          @"我就算在怎么无情再怎么残酷再 怎么无理取闹也不会比你更无情更残酷更 无理取闹！",
-                          @"我会比你无情！？比你 残酷！？比你无理取闹！？你才是我见过 最无情最残酷最无理取闹的人！",
-                          @"哼 ，我绝对没你无情没你残酷没你无理取闹 ！",
-                          @"好，既然你说我无情我残酷我无 理取闹我就无情给你看残酷给你看无理取 闹给你看！",
-                          @"看吧，还说你不无情不 残酷不无理取闹现在完全展现你无情残酷 无理取的一面了吧",
-                          @"啊啊啊啊啊啊",
-                          @"呀呀呀呀",
-                          ];
+        self.messages = @[].mutableCopy;
+        for (int i = 0; i++ < 12;) {
+            NSString *string = [NSString stringWithFormat:@"string%d", i];
+            [self.messages addObject:NSLocalizedString(string, nil)];
+        }
         self.speectSynthesizer = [AVSpeechSynthesizer new];
         self.voices = @[
                         [AVSpeechSynthesisVoice voiceWithLanguage:@"ZH-cn"],
-                        [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-HK"],
+                        [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"],
                         ];
     }
     return self;
@@ -59,7 +52,7 @@ static TZSpeechManager *s = nil;
     for (int i = 0; i < self.messages.count; i++) {
         AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.messages[i]];
         utterance.voice = self.voices[i % 2];
-        utterance.rate = 1;
+        utterance.rate = 0.7;
         [self.speectSynthesizer speakUtterance:utterance];
     }
 }

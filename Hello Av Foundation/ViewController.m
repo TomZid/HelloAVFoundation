@@ -38,7 +38,8 @@ static inline NSString *cellIdentifierForReuse(NSIndexPath *indexPath) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TZCellTableViewCell *cell = (TZCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifierForReuse(indexPath) forIndexPath:indexPath];
+//    TZCellTableViewCell *cell = (TZCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifierForReuse(indexPath) forIndexPath:indexPath];
+    TZCellTableViewCell *cell = (TZCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifierForReuse(indexPath)];
     cell.messageLabel.text = self.array[indexPath.row];
     return cell;
 }
