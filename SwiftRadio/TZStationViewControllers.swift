@@ -12,6 +12,15 @@ class TZStationViewControllers: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
 
+    var stations = [RadioStation]() {
+        didSet {
+            guard stations != oldValue else {
+                return
+            }
+            tableview.reloadData()
+        }
+    }
+
     var pull = {
         return UIRefreshControl()
     }()
@@ -22,7 +31,30 @@ class TZStationViewControllers: UIViewController {
         tableview.backgroundColor = UIColor.black
         tableview.separatorStyle = .none
 
+        // getData
+        getData()
+
         makePull()
+    }
+
+    func getData() {
+
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true;
+
+        TZDataManager.getDataFromJson { (data) in
+
+            defer {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.pull.endRefreshing()
+                })
+            }
+
+            guard let data = data, let json = try? JSONDecoder().decode([String: [RadioStation]].self, from: data), let result = json["station"] else {
+                return
+            }
+            self.stations = result
+        }
     }
 
     func makePull() {
@@ -34,9 +66,7 @@ class TZStationViewControllers: UIViewController {
 
     @objc
     func pullToRefresh() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.pull.endRefreshing()
-        }
+        getData()
     }
 
 }
@@ -44,12 +74,13 @@ class TZStationViewControllers: UIViewController {
 //MARK: - TableViewDataSource
 extension TZStationViewControllers: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return stations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "TZStationCellIdentifier", for: indexPath)
+        let cell = tableview.dequeueReusableCell(withIdentifier: "TZStationCellIdentifier", for: indexPath) as! TZStationTableViewCell
         cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor.clear : UIColor.black.withAlphaComponent(0.2)
+        cell.configurationCell(station: stations[indexPath.row])
         return cell
     }
 

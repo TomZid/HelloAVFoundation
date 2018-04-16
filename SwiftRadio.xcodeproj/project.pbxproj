@@ -59,6 +59,8 @@
 		CAA7C15E1FD77F3A003CABDF /* FRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7C15C1FD77F3A003CABDF /* FRadioPlayer.swift */; };
 		CAA8FDB52000614600050F77 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8FDB42000614600050F77 /* RadioPlayer.swift */; };
 		F7244A55207DBEF000AD7553 /* TZStationViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7244A54207DBEF000AD7553 /* TZStationViewControllers.swift */; };
+		F7ACE43E2084315700C1C16C /* TZDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACE43D2084315700C1C16C /* TZDataManager.swift */; };
+		F7ACE4402084328100C1C16C /* TZStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACE43F2084328100C1C16C /* TZStationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		CAA7C15C1FD77F3A003CABDF /* FRadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioPlayer.swift; sourceTree = "<group>"; };
 		CAA8FDB42000614600050F77 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
 		F7244A54207DBEF000AD7553 /* TZStationViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZStationViewControllers.swift; sourceTree = "<group>"; };
+		F7ACE43D2084315700C1C16C /* TZDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZDataManager.swift; sourceTree = "<group>"; };
+		F7ACE43F2084328100C1C16C /* TZStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZStationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				949BBB3F1ACC9DEE005B7C26 /* DataManager.swift */,
+				F7ACE43D2084315700C1C16C /* TZDataManager.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			children = (
 				945DB3C41AD5A6E200495EBB /* NothingFoundCell.xib */,
 				94D30EA61AD07A880024FE96 /* StationTableViewCell.swift */,
+				F7ACE43F2084328100C1C16C /* TZStationTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -461,6 +467,8 @@
 				94D260911B45D20000DE671C /* SwiftRadio-Settings.swift in Sources */,
 				94D30EA71AD07A880024FE96 /* StationTableViewCell.swift in Sources */,
 				5F22BA3C1F72AD5A00CB5911 /* SpringLabel.swift in Sources */,
+				F7ACE4402084328100C1C16C /* TZStationTableViewCell.swift in Sources */,
+				F7ACE43E2084315700C1C16C /* TZDataManager.swift in Sources */,
 				5F22BA3D1F72AD5A00CB5911 /* BlurView.swift in Sources */,
 				5F22BA411F72AD5A00CB5911 /* SpringTextField.swift in Sources */,
 				9409E1401ABF78B000312E2B /* NowPlayingViewController.swift in Sources */,
