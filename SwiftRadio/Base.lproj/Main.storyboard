@@ -539,18 +539,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stationImage" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-S1-wtl">
-                                                    <rect key="frame" x="10" y="5" width="128" height="80"/>
+                                                    <rect key="frame" x="10" y="5" width="120" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="EWS-S1-wtl" secondAttribute="height" multiplier="120 : 75" id="31x-pZ-Zjv"/>
+                                                        <constraint firstAttribute="width" constant="120" id="xQJ-oP-1Wo"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzJ-D6-xv7">
-                                                    <rect key="frame" x="20" y="15" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-tV-WYA">
                                                     <rect key="frame" x="146" y="21" width="209" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,7 +583,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lvr-X6-eHN" firstAttribute="top" secondItem="IrJ-Au-5Lb" secondAttribute="top" id="4Yh-49-e8I"/>
-                            <constraint firstItem="IrJ-Au-5Lb" firstAttribute="bottom" secondItem="lvr-X6-eHN" secondAttribute="bottom" id="RkQ-k6-TfK"/>
+                            <constraint firstItem="lvr-X6-eHN" firstAttribute="bottom" secondItem="IrJ-Au-5Lb" secondAttribute="bottom" id="Uvb-fz-Skd"/>
                             <constraint firstItem="IrJ-Au-5Lb" firstAttribute="trailing" secondItem="lvr-X6-eHN" secondAttribute="trailing" id="kE3-N4-smJ"/>
                             <constraint firstItem="lvr-X6-eHN" firstAttribute="leading" secondItem="IrJ-Au-5Lb" secondAttribute="leading" id="yPD-zM-4DZ"/>
                         </constraints>

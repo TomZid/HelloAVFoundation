@@ -61,6 +61,7 @@
 		F7244A55207DBEF000AD7553 /* TZStationViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7244A54207DBEF000AD7553 /* TZStationViewControllers.swift */; };
 		F7ACE43E2084315700C1C16C /* TZDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACE43D2084315700C1C16C /* TZDataManager.swift */; };
 		F7ACE4402084328100C1C16C /* TZStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACE43F2084328100C1C16C /* TZStationTableViewCell.swift */; };
+		F7ACE44220844B2800C1C16C /* UIImage+TZDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ACE44120844B2800C1C16C /* UIImage+TZDownload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		F7244A54207DBEF000AD7553 /* TZStationViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZStationViewControllers.swift; sourceTree = "<group>"; };
 		F7ACE43D2084315700C1C16C /* TZDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZDataManager.swift; sourceTree = "<group>"; };
 		F7ACE43F2084328100C1C16C /* TZStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZStationTableViewCell.swift; sourceTree = "<group>"; };
+		F7ACE44120844B2800C1C16C /* UIImage+TZDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TZDownload.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 				94D260951B45E3FA00DE671C /* AnimationFrames.swift */,
 				949E5EAF1ACB340200AB6280 /* UIImageView+Download.swift */,
 				94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */,
+				F7ACE44120844B2800C1C16C /* UIImage+TZDownload.swift */,
 			);
 			name = "UI Helpers";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				5F22BA3D1F72AD5A00CB5911 /* BlurView.swift in Sources */,
 				5F22BA411F72AD5A00CB5911 /* SpringTextField.swift in Sources */,
 				9409E1401ABF78B000312E2B /* NowPlayingViewController.swift in Sources */,
+				F7ACE44220844B2800C1C16C /* UIImage+TZDownload.swift in Sources */,
 				94D1D0A51AD6D6230022CA11 /* InfoDetailViewController.swift in Sources */,
 				5F22BA4B1F72AD5A00CB5911 /* KeyboardLayoutConstraint.swift in Sources */,
 				5F22BA421F72AD5A00CB5911 /* SoundPlayer.swift in Sources */,
